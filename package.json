@@ -1,0 +1,26 @@
+{
+  "name": "mongo-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Mongo Node API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilannie/node-mongo-boilerplate.git"
+  },
+  "author": "Annie Steenson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilannie/node-mongo-boilerplate/issues"
+  },
+  "homepage": "https://github.com/lilannie/node-mongo-boilerplate#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7"
+  }
+}

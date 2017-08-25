@@ -5,7 +5,8 @@ const express = require('express'),
 		list_all_tasks,
 		create_a_task,
 		read_a_task,
-		update_a_task
+		update_a_task,
+		delete_a_task
 	} = todoList;
 
 router.get('/', list_all_tasks);

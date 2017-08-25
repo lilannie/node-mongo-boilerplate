@@ -1,5 +1,5 @@
 const mongoose = require('mongoose'),
-	Schema = mongoose.modelSchemas;
+	Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
 	name: {

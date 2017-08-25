@@ -1,11 +1,13 @@
 const express = require('express'),
-	app = express(),
-	port = process.env.PORT || 3000,
 	mongoose = require('mongoose'),
-	Task = require('./models/todoList'), // created model loading here
 	logger = require('morgan'),
 	bodyParser = require('body-parser'),
 	cookieParser = require('cookie-parser'),
+	path = require('path'),
+
+	app = express(),
+	port = process.env.PORT || 3000,
+	Task = require('./models/todoList'), // created model loading here
 	todoList = require('./routes/todoList'),
 	index = require('./routes/index');
 
@@ -28,14 +30,14 @@ app.use('/', index);
 app.use('/todoList', todoList); // Register routes
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
 	var err = new Error('Not Found');
 	err.status = 404;
 	next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
 	// set locals, only providing error in development
 	res.locals.message = err.message;
 	res.locals.error = req.app.get('env') === 'development' ? err : {};

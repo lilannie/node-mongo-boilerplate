@@ -22,8 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/todoList')
-	.then(() =>  console.log('connection succesful'))
+mongoose.connect('mongodb://localhost:27017/todoList', {}, true)
+	.then(() =>  console.log('MongoDB Connection Succesful!'))
 	.catch((err) => console.error(err));
 
 app.use('/', index);
